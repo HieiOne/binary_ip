@@ -1,4 +1,12 @@
 #!/bin/bash
+##########################################################################################################
+# Name: binary_ip
+# Author: Hiei <blascogasconiban@gmail.com>
+# Version: 1.0/stable
+# Description:
+#              This simple script transforms any ipv4 IP to binary. (Can also transform one single number)
+##########################################################################################################
+
 NUMBER=128 ; bold=$(tput bold);red=$(tput setaf 1);reset=$(tput sgr0);yellow=$(tput setaf 3) #colors
 
 function transformation() {
@@ -18,7 +26,7 @@ echo -n "${reset}$2"
 }
 
 if ! [[ "$1" =~ ^[0-9]*\.*[0-9]*\.*[0-9]*\.*[0-9]*$ ]] || [ ! $# -eq 1 ]; then #Regex to avoid non-number characters except '.'
-  echo "${red}${bold}Â¡WARNING!: ${yellow}Give a good argument [e.g '192.168.221.103']"
+  echo "${red}${bold}¡WARNING!: ${yellow}Give a good argument [e.g '192.168.221.103']"
   exit 1
 fi
 
